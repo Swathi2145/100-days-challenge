@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Step 1: Styles for the Room and Button */
+        #room {
+            width: 300px;
+            height: 200px;
+            background-color: black; /* Initial "Dark" state */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+        }
+
+        #toggleBtn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            /* Starting Styles */
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Step 1: Physical Elements -->
+    <div id="room"></div>
+    <button id="toggleBtn">OFF</button>
+
+    <script>
+        // Step 2: Access elements and store in variables
+        const btn = document.getElementById("toggleBtn");
+        const room = document.getElementById("room");
+
+        // Step 3: Set up the Click Event
+        btn.onclick = function(e) {
+            
+            // Step 4: Implement If/Else Logic
+            if (e.target.textContent === "OFF") {
+                // Condition A: Turn ON
+                e.target.textContent = "ON";
+                e.target.style.backgroundColor = "green";
+                room.style.backgroundColor = "gold";
+            } else {
+                // Condition B: Turn OFF
+                e.target.textContent = "OFF";
+                e.target.style.backgroundColor = "red";
+                room.style.backgroundColor = "black";
+            }
+        };
+    </script>
+
+</body>
+</html>
