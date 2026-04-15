@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="fruit-basket">
+    <div id="fruitbasket">
   <span style="cursor: pointer;">🍎</span>
   <span style="cursor: pointer;">🍌</span>
   <span style="cursor: pointer;">🍇</span>
@@ -17,7 +17,7 @@
 
 <script>
 
-const basket = document.getElementById('fruit-basket');
+const basket = document.getElementById('fruitbasket');
 const display = document.getElementById('message');
 
 basket.onclick = function(e) {
@@ -25,7 +25,7 @@ basket.onclick = function(e) {
   if (e.target.tagName === 'SPAN') {
     const fruitEmoji = e.target.textContent;
     
-    display.textContent = "You ate the " + fruitEmoji + "!";
+    display.textContent = "You eat the " + fruitEmoji + "!";
   }
 };
 
